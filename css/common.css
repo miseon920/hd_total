@@ -23,7 +23,7 @@
   padding: 50px 0;
   position: relative;
 }
-.TopBanner.on {
+.TopBanner.check {
   height: 0;
 }
 .TopBanner h2 {
@@ -45,12 +45,25 @@
   font-size: 25px;
 }
 .Header {
-  padding: 0 75px;
+  /* padding: 0 75px; */
   background: rgba(0, 0, 0, 0.3);
-  line-height: 100px;
   transition: 0.5s all;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
-.Header:hover {
+.Header .bottom {
+  padding: 0 75px;
+  line-height: 100px;
+}
+.Header.on .bottom {
+  line-height: 60px;
+  border-bottom: 1px solid #ddd;
+}
+.Header:hover,
+.Header.on {
   background: #fff;
   color: #444;
 }
@@ -65,7 +78,8 @@
   height: 22px;
   background: url(../assets/logo_white.png) no-repeat center/cover;
 }
-.Header:hover h1 a {
+.Header:hover h1 a,
+.Header.on h1 a {
   background: url(../assets/logo.png) no-repeat center/cover;
 }
 .Header .Gnb {
@@ -84,7 +98,8 @@
   font-size: 19px;
   position: relative;
 }
-.Header:hover .Gnb > ul > li a {
+.Header:hover .Gnb > ul > li a,
+.Header.on .Gnb > ul > li a {
   color: #444;
 }
 .Header .Gnb > ul > li a::after {
@@ -102,11 +117,17 @@
 .Header .top_service {
   float: right;
 }
+.Wrap {
+  padding-top: 155px;
+}
+.Wrap.check {
+  padding-top: 0;
+}
 section.Section01 .main_slider figure {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 700px;
+  height: 900px;
   position: relative;
 }
 .main_slider figure.item01 {
@@ -123,4 +144,65 @@ section.Section01 .main_slider figure {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.Section02 {
+  padding: 100px 0;
+  text-align: center;
+}
+.Section02 .inner h2 {
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+.Section02 .inner > p {
+  font-size: 15px;
+  font-weight: 300;
+  padding-bottom: 40px;
+}
+.Section02 .content figure {
+  float: left;
+  width: calc(100% / 3);
+}
+.Section02 figure img {
+  transition: 0.5s;
+}
+.Section02 figure:hover img {
+  transform: scale(1.2);
+}
+.Section02 figure .box {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.Section02 figure .des {
+  font-size: 18px;
+  font-weight: 500;
+  padding-bottom: 20px;
+  position: relative;
+}
+.Section02 figure .des::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 40px;
+  background: #018851;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translate(-50%, -20px);
+}
+.Section02 figure p {
+  padding-bottom: 15px;
+}
+.Section02 figure p span {
+  display: block;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.Section02 figure a {
+  display: inline-block;
+  padding: 13px 30px;
+  color: #018851;
+  border: 1px solid #018851;
+  font-size: 13px;
 }
