@@ -70,7 +70,7 @@
 }
 .Header .Gnb {
   float: left;
-  padding-left: 50px;
+  padding-left: 60px;
 }
 .Header .Gnb > ul > li {
   /* line-height: 1;
@@ -101,4 +101,26 @@
 }
 .Header .top_service {
   float: right;
+}
+section.Section01 .main_slider figure {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 700px;
+  position: relative;
+}
+.main_slider figure.item01 {
+  background: url(../assets/main_visual01.jpg);
+}
+.main_slider figure.item02 {
+  background: url(../assets/main_visual02.jpg);
+}
+.main_slider figure.item03 {
+  background: url(../assets/main_visual03.jpg);
+}
+.main_slider figure .inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

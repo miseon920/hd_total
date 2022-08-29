@@ -3,4 +3,5 @@ $(function () {
     // $(".TopBanner").slideUp(600);
     $(".TopBanner").addClass("on");
   });
+  $(".main_slider").slick({});
 });
