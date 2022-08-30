@@ -32,6 +32,7 @@ b,
 strong,
 em {
   font-style: normal;
+  font-weight: initial;
 }
 
 img {
