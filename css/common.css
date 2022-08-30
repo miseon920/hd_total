@@ -145,6 +145,30 @@ section.Section01 .main_slider figure {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.main_slider figure .inner h2 {
+  font-size: 58px;
+  color: #fff;
+  line-height: 1.2;
+  text-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+}
+.main_slider figure .inner h2 span {
+  display: block;
+}
+.main_slider figure .inner p {
+  font-size: 24px;
+  color: #fff;
+  line-height: 1.4;
+  padding: 30px 0 10px;
+  text-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+}
+.main_slider figure .inner a {
+  display: inline-block;
+  font-size: 14px;
+  color: #008850;
+  padding: 13px 30px;
+  border: 1px solid #4cab84;
+  background: rgba(255, 255, 255, 0.7);
+}
 .Section02 {
   padding: 100px 0;
   text-align: center;
@@ -161,6 +185,71 @@ section.Section01 .main_slider figure {
   font-size: 15px;
   font-weight: 300;
   padding-bottom: 40px;
+}
+.Section01 {
+  position: relative;
+}
+.Section01 .num {
+  position: absolute;
+  left: 18.5%;
+  bottom: 250px;
+}
+.Section01 .num span {
+  color: #f9f9f9;
+}
+.Section01 .slide_dots {
+  position: absolute;
+  right: 18.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #f9f9f9;
+  font-size: 18px;
+  text-align: right;
+}
+.Section01 .slide_dots li {
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.Section01 .slide_dots li:last-child {
+  margin-bottom: 0;
+}
+.Section01 .slide_dots li::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-left: 15px;
+  vertical-align: -2px;
+}
+.Section01 .slide_dots li.on::after {
+  background: #ddd;
+}
+.Section01 .slide_handler2 i {
+  border-bottom: 1px solid #f9f9f9;
+  position: relative;
+  font-size: 0;
+  background: none;
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+}
+.Section01 .slide_handler2 i::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-width: 1px;
+  border-left: 1px solid #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 4px;
+}
+.Section01 .slide_handler2 i:last-child::before {
+  border-left: 0;
+  border-top: 1px solid #ddd;
+  left: calc(100% - 24px);
 }
 .Section02 .content figure {
   float: left;
@@ -330,17 +419,27 @@ section.Section01 .main_slider figure {
 }
 .Section04 .state_box {
   position: absolute;
-  left: 50%;
+  left: 25%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1;
   background: #fff;
   padding: 50px;
-  margin-left: -31%;
   width: 300px;
   height: 420px;
   text-align: left;
   box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.25);
+}
+.Section04 .state_box::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #018851;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  margin-left: -20px;
 }
 .Section04 .state_box .num {
   position: absolute;
@@ -368,21 +467,67 @@ section.Section01 .main_slider figure {
   border: 1px solid #008850;
   text-align: center;
 }
-.Section04 .state_box .num {
+.num {
   letter-spacing: 2px;
 }
-.Section04 .state_box .num b {
+.num b {
   font-size: 30px;
   color: #008850;
 }
-.Section04 .state_box .num span {
+.num span {
   font-size: 20px;
   color: #666;
 }
-.Section04 .slide_handler i {
+.slide_handler2 {
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
+  max-width: 1400px;
+  width: 100%;
+}
+.slide_handler2 i:first-child {
+  float: left;
+}
+.slide_handler2 i:last-child {
+  float: right;
+}
+.slide_handler2 i {
+  width: 80px;
+  height: 50px;
+  line-height: 50px;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+}
+.Section04 .slide_handler {
+  max-width: 1300px;
+}
+.Section04 .slick-dots {
+  text-align: center;
+  font-size: 0;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+}
+.Section04 .slick-dots li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.Section04 .slick-dots li button {
+  font-size: 0;
+  width: 18px;
+  height: 18px;
+  background: #ddd;
+  border: 0;
+  box-shadow: none;
+}
+.Section04 .slick-dots li.slick-active button {
+  background: #008850;
+}
+.slick-slide img {
+  margin: 0 auto;
 }

@@ -48,3 +48,8 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
+
+i,
+button {
+  cursor: pointer;
+}
