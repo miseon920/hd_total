@@ -1,532 +1,456 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>현대엘리베이터 - javascript</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/common.js"></script>
-  </head>
-  <body>
-    <div class="Wrap">
-      <header class="Header">
-        <div class="TopBanner">
-          <div class="w1200">
-            <h2>
-              현대엘리베이터 스마트 테크놀로지 체험
-              <span>Green Technology</span>
-            </h2>
-            <p>
-              현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.
-            </p>
-            <div class="top_close_btn"><i class="xi-close"></i></div>
-          </div>
-        </div>
-        <div class="hd_wrap">
-          <h1>
-            <a href=""> 현대엘리베이터 </a>
-          </h1>
-          <nav class="Gnb w1200">
-            <ul>
-              <li><a href="#!">기업정보</a></li>
-              <li><a href="#!">솔루션</a></li>
-              <li><a href="#!">서비스</a></li>
-              <li><a href="#!">혁신기술</a></li>
-              <li><a href="#!">고객지원</a></li>
-            </ul>
-          </nav>
-          <div class="top_service">
-            <ul class="project">
-              <li><a href="#!">주요프로젝트</a></li>
-              <li><a href="#!">IR</a></li>
-            </ul>
-            <div class="lang">
-              <strong
-                ><i class="xi-globus"></i> KOR
-                <i class="xi-angle-down arafter"></i
-              ></strong>
-              <ul class="lang_box">
-                <li><a href="#!">KOR</a></li>
-                <li><a href="#!">ENG</a></li>
-                <li><a href="#!">CHN</a></li>
-              </ul>
-            </div>
-            <div class="top_search">
-              <strong><i class="xi-search"></i></strong>
-              <div class="search_box">
-                <form action="#!">
-                  <input
-                    type="text"
-                    placeholder="검색어를 입력하세요"
-                    required
-                  />
-                  <button>
-                    <i class="xi-search"></i>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <section class="MainVisual">
-        <div class="main_slider swiper">
-          <div class="swiper-wrapper">
-            <figure class="item01 swiper-slide">
-              <div class="w1200">
-                <h2>
-                  <span>현대엘리베이터</span>
-                  <span>스마트 테크놀로지 체험</span>
-                </h2>
-                <p>2021 한국국제승강기엑스포 VR투어</p>
-                <a href="">바로가기</a>
-              </div>
-            </figure>
-            <figure class="item02 swiper-slide">
-              <div class="w1200">
-                <h2>
-                  <span>현대엘리베이터2</span>
-                  <span>스마트 테크놀로지 체험</span>
-                </h2>
-                <p>2021 한국국제승강기엑스포 VR투어</p>
-                <a href="">바로가기</a>
-              </div>
-            </figure>
-            <figure class="item03 swiper-slide">
-              <div class="w1200">
-                <h2>
-                  <span>현대엘리베이터3</span>
-                  <span>스마트 테크놀로지 체험</span>
-                </h2>
-                <p>2021 한국국제승강기엑스포 VR투어</p>
-                <a href="">바로가기</a>
-              </div>
-            </figure>
-          </div>
-          <div class="main_slider_num num"></div>
-          <div class="slide_handler">
-            <button class="prev">prev</button>
-            <button class="next">next</button>
-          </div>
-          <ul class="slide_dots">
-            <li class="on">
-              <span>slide01</span>
-            </li>
-            <li>
-              <span>slide02</span>
-            </li>
-            <li>
-              <span>slide03</span>
-            </li>
-          </ul>
-        </div>
-        <!-- <div class="num"></div>
-        <div class="slide_handler slide_handler2">
-          <i>prev</i>
-          <i>next</i>
-        </div>
-        <ul class="slide_dots">
-          <li class="on">
-            <span>slide01</span>
-          </li>
-          <li>
-            <span>slide02</span>
-          </li>
-          <li>
-            <span>slide03</span>
-          </li>
-        </ul> -->
-      </section>
-      <!--
-      <section class="Section02">
-        <div class="inner sectit">
-          <h2>사람과 사람을 연결하는 종합 승강기 기업</h2>
-          <p>최고의 기술과 서비스로 편리하고 풍요로운 세상을 만들어갑니다.</p>
-          <div class="content after">
-            <figure>
-              <div class="box">
-                <img src="./assets/section1_1.jpg" alt="" />
-              </div>
-              <div class="des">엘리베이터</div>
-              <p>
-                <span>단순한 수직운송수단을 넘어 빌딩의 가치를 </span>
-                <span>높여 드립니다.</span>
-              </p>
-              <a href="#!"> 자세히보기 <i class="xi-arafter-right"></i> </a>
-            </figure>
-            <figure>
-              <div class="box">
-                <img src="./assets/section1_2.jpg" alt="" />
-              </div>
-              <div class="des">에스컬레이터 & 무빙워크</div>
-              <p>
-                <span>편안한 승차감과 안전성, 경제성으로 최고의 </span>
-                <span>고객감동을 실현합니다.</span>
-              </p>
-              <a href="#!"> 자세히보기 <i class="xi-arafter-right"></i> </a>
-            </figure>
-            <figure>
-              <div class="box">
-                <img src="./assets/section1_3.jpg" alt="" />
-              </div>
-              <div class="des">주차시스템</div>
-              <p>
-                <span>다양한 제품으로 주차 공간 확보에 대한 </span>
-                <span>고민을 해결해 드립니다.</span>
-              </p>
-              <a href="#!"> 자세히보기 <i class="xi-arafter-right"></i> </a>
-            </figure>
-          </div>
-        </div>
-      </section>
-      <section class="Section03 after">
-        <div class="slider_box">
-          <div class="left">
-            <div class="left_slider">
-              <figure>
-                <img src="./assets/main_m01.jpg" alt="" />
-                <strong>금융센터1</strong>
-              </figure>
-              <figure>
-                <img src="./assets/main_m02.jpg" alt="" />
-                <strong>금융센터2</strong>
-              </figure>
-              <figure>
-                <img src="./assets/main_m03.jpg" alt="" />
-                <strong>금융센터3</strong>
-              </figure>
-              <figure>
-                <img src="./assets/main_m04.jpg" alt="" />
-                <strong>금융센터4</strong>
-              </figure>
-              <figure>
-                <img src="./assets/main_m05.jpg" alt="" />
-                <strong>금융센터5</strong>
-              </figure>
-              <figure>
-                <img src="./assets/main_m06.jpg" alt="" />
-                <strong>금융센터6</strong>
-              </figure>
-              <figure>
-                <img src="./assets/main_m07.jpg" alt="" />
-                <strong>금융센터7</strong>
-              </figure>
-              <figure>
-                <img src="./assets/main_m08.jpg" alt="" />
-                <strong>금융센터8</strong>
-              </figure>
-              <figure>
-                <img src="./assets/main_m09.jpg" alt="" />
-                <strong>금융센터9</strong>
-              </figure>
-            </div>
-          </div>
-          <div class="right">
-            <h2>건물의 가치를 높이는 현대엘리베이터</h2>
-            <p>특별한 기술을 실현할수록 여러분의 삶의 무대도 특별해 집니다.</p>
-            <div class="slide_handler">
-              <i class="xi-angle-left"></i>
-              <i class="xi-angle-right"></i>
-            </div>
-            <div class="right_slider">
-              <figure>
-                <img src="./assets/main_m02.jpg" alt="" /><strong
-                  >금융센터2</strong
-                >
-              </figure>
-              <figure>
-                <img src="./assets/main_m03.jpg" alt="" /><strong
-                  >금융센터3</strong
-                >
-              </figure>
-              <figure>
-                <img src="./assets/main_m04.jpg" alt="" /><strong
-                  >금융센터4</strong
-                >
-              </figure>
-              <figure>
-                <img src="./assets/main_m05.jpg" alt="" /><strong
-                  >금융센터5</strong
-                >
-              </figure>
-              <figure>
-                <img src="./assets/main_m06.jpg" alt="" /><strong
-                  >금융센터6</strong
-                >
-              </figure>
-              <figure>
-                <img src="./assets/main_m07.jpg" alt="" /><strong
-                  >금융센터7</strong
-                >
-              </figure>
-              <figure>
-                <img src="./assets/main_m08.jpg" alt="" /><strong
-                  >금융센터8</strong
-                >
-              </figure>
-              <figure>
-                <img src="./assets/main_m09.jpg" alt="" /><strong
-                  >금융센터9</strong
-                >
-              </figure>
-              <figure>
-                <img src="./assets/main_m01.jpg" alt="" />
-                <strong>금융센터1</strong>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="Section04">
-        <div class="inner sectit">
-          <h2>클린 무빙 솔루션</h2>
-          <p>접촉 없이 편하게 이동합니다.</p>
-        </div>
-        <div class="content">
-          <div class="center_slider">
-            <figure><img src="./assets/main_s01.jpg" alt="" /></figure>
-            <figure><img src="./assets/main_s02.jpg" alt="" /></figure>
-            <figure><img src="./assets/main_s03.jpg" alt="" /></figure>
-            <figure><img src="./assets/main_s04.jpg" alt="" /></figure>
-            <figure><img src="./assets/main_s05.jpg" alt="" /></figure>
-            <figure><img src="./assets/main_s06.jpg" alt="" /></figure>
-            <figure><img src="./assets/main_s07.jpg" alt="" /></figure>
-            <figure><img src="./assets/main_s08.jpg" alt="" /></figure>
-            <figure><img src="./assets/main_s09.jpg" alt="" /></figure>
-          </div>
-          <div class="slide_handler slide_handler2">
-            <i class="xi-arafter-left"></i>
-            <i class="xi-arafter-right"></i>
-          </div>
-          <div class="state_box">
-            <div class="content_box">
-              <div class="title on">
-                <strong>블루투스 태깅1</strong>
-                <p>
-                  H-Mobile Thru (현대 모바일 스루) 앱으로 엘리베이터를 제어할 수
-                  있는 신개념 이동시스템입니다.
-                </p>
-                <a href="#!">자세히보기 <i class="xi-arafter-right"></i></a>
-              </div>
-              <div class="title">
-                <strong>블루투스 태깅2</strong>
-                <p>
-                  H-Mobile Thru (현대 모바일 스루) 앱으로 엘리베이터를 제어할 수
-                  있는 신개념 이동시스템입니다.
-                </p>
-                <a href="#!">자세히보기 <i class="xi-arafter-right"></i></a>
-              </div>
-              <div class="title">
-                <strong>블루투스 태깅3</strong>
-                <p>
-                  H-Mobile Thru (현대 모바일 스루) 앱으로 엘리베이터를 제어할 수
-                  있는 신개념 이동시스템입니다.
-                </p>
-                <a href="#!">자세히보기 <i class="xi-arafter-right"></i></a>
-              </div>
-              <div class="title">
-                <strong>블루투스 태깅4</strong>
-                <p>
-                  H-Mobile Thru (현대 모바일 스루) 앱으로 엘리베이터를 제어할 수
-                  있는 신개념 이동시스템입니다.
-                </p>
-                <a href="#!">자세히보기 <i class="xi-arafter-right"></i></a>
-              </div>
-              <div class="title">
-                <strong>블루투스 태깅5</strong>
-                <p>
-                  H-Mobile Thru (현대 모바일 스루) 앱으로 엘리베이터를 제어할 수
-                  있는 신개념 이동시스템입니다.
-                </p>
-                <a href="#!">자세히보기 <i class="xi-arafter-right"></i></a>
-              </div>
-              <div class="title">
-                <strong>블루투스 태깅6</strong>
-                <p>
-                  H-Mobile Thru (현대 모바일 스루) 앱으로 엘리베이터를 제어할 수
-                  있는 신개념 이동시스템입니다.
-                </p>
-                <a href="#!">자세히보기 <i class="xi-arafter-right"></i></a>
-              </div>
-              <div class="title">
-                <strong>블루투스 태깅7</strong>
-                <p>
-                  H-Mobile Thru (현대 모바일 스루) 앱으로 엘리베이터를 제어할 수
-                  있는 신개념 이동시스템입니다.
-                </p>
-                <a href="#!">자세히보기 <i class="xi-arafter-right"></i></a>
-              </div>
-              <div class="title">
-                <strong>블루투스 태깅8</strong>
-                <p>
-                  H-Mobile Thru (현대 모바일 스루) 앱으로 엘리베이터를 제어할 수
-                  있는 신개념 이동시스템입니다.
-                </p>
-                <a href="#!">자세히보기 <i class="xi-arafter-right"></i></a>
-              </div>
-              <div class="title">
-                <strong>블루투스 태깅9</strong>
-                <p>
-                  H-Mobile Thru (현대 모바일 스루) 앱으로 엘리베이터를 제어할 수
-                  있는 신개념 이동시스템입니다.
-                </p>
-                <a href="#!">자세히보기 <i class="xi-arafter-right"></i></a>
-              </div>
-            </div>
-            <div class="num"></div>
-          </div>
-        </div>
-      </section>
 
-      <section class="Section05">
-        <h2>홍보영상</h2>
-        <p>건물 특성에 맞는 다양한 제품으로 고객의 요구를 충족시켜드립니다.</p>
-        <div class="inner">
-          <div class="movie_case">동영상</div>
-          <div class="movie_handler">
-            <button>동영상 제어</button>
-          </div>
-          <ul class="txt">
-            <li>
-              <strong>IT Technology</strong>
-              <span>IT 기술이 창조하는 승강기 스마트 시스템</span>
-            </li>
-            <li>
-              <strong>Green Technology</strong>
-              <span>지구환경을 생각하는 녹색기술</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="Section06">
-        <h2>현대엘리베이터 소식</h2>
-        <p>현대엘리베이터의 새소식을 전해드립니다.</p>
-        <div class="inner after">
-          <figure>
-            <a href="#!">
-              <img src="./assets/news01.jpg" alt="" />
-              <strong class="sort"> 보도자료 </strong>
-              <div class="title">
-                현대엘리베이터, ‘스마트 엘리베이터 국내외 공모전’ 개최
-              </div>
-              <span class="date"> 2022.08.22 </span>
-            </a>
-          </figure>
-          <figure>
-            <a href="#!">
-              <img src="./assets/news02.jpg" alt="" />
-              <strong class="sort"> 보도자료 </strong>
-              <div class="title">
-                현대엘리베이터, ‘스마트 엘리베이터 국내외 공모전’ 개최
-              </div>
-              <span class="date"> 2022.08.22 </span>
-            </a>
-          </figure>
-          <figure>
-            <a href="#!">
-              <img src="./assets/news03.jpg" alt="" />
-              <strong class="sort"> 보도자료 </strong>
-              <div class="title">
-                현대엘리베이터, ‘스마트 엘리베이터 국내외 공모전’ 개최
-              </div>
-              <span class="date"> 2022.08.22 </span>
-            </a>
-          </figure>
-        </div>
-      </section>
-      <footer class="Footer">
-        <div class="ft_top">
-          <div class="inner after">
-            <ul class="left">
-              <li><a href="#!" class="mainColor">개인정보처리방침</a></li>
-              <li><a href="#!">윤리경영 사이버신문고</a></li>
-              <li>
-                <a href="#!"
-                  >현대 고객케어센터 <span class="mainColor">1577-0603</span></a
-                >
-              </li>
-            </ul>
-            <ul class="right">
-              <li><a href="#!">증명서 발급조회</a></li>
-              <li><a href="#!">인트라넷</a></li>
-              <li><a href="#!">패밀리사이트</a></li>
-            </ul>
-            <div class="content">
-              <ul class="link">
-                <li><a href="">현대아산</a></li>
-                <li><a href="">현대무벡스</a></li>
-                <li><a href="">현대경제연구원</a></li>
-                <li><a href="">현대투자파트너스</a></li>
-                <li><a href="">현대글로벌 </a></li>
-              </ul>
-              <ul class="link">
-                <li><a href="">자재협력시스템</a></li>
-                <li><a href="">인사정보시스템</a></li>
-                <li><a href="">그룹웨어</a></li>
-                <li><a href="">디지털세금계산서</a></li>
-                <li><a href="">전자구매입찰</a></li>
-              </ul>
-              <ul class="link">
-                <li><a href="">3m01</a></li>
-                <li><a href="">3m02</a></li>
-                <li><a href="">3m03</a></li>
-                <li><a href="">3m04</a></li>
-                <li><a href="">3m05</a></li>
-              </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현대엘리베이트 실습 - javascript</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+
+</head>
+
+<body>
+    <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+    <div class="Wrap">
+        <header class="Header row">
+            <div class="TopBanner">
+                <div class="w1200">
+                    <h2>
+                        현대엘리베이트 스마트 테크놀로지 체험 <span>Green Technology</span>
+                    </h2>
+                    <p>
+                        현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.
+                    </p>
+                    <div class="top_close_btn">
+                        <i class="xi-close"></i>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="ft_bottom">
-          <div class="inner after">
-            <div class="left">
-              <address>충청북도 충주시 충주산단1로 128 현대엘리베이터</address>
-              <span
-                >COPYRIGHT &copy; 2018 HYUNDAIELEVATOR CO.,LTD. ALL RIGHTS
-                RESERVED</span
-              >
+            <div class="hd_wrap">
+                <h1>
+                    <a href="./">
+                        현대엘리베이트
+                    </a>
+                </h1>
+                <nav class="Gnb w1200">
+                    <ul>
+                        <li><a href="#!">기업정보</a></li>
+                        <li><a href="#!">솔루션</a></li>
+                        <li><a href="#!">서비스</a></li>
+                        <li><a href="#!">혁신기술</a></li>
+                        <li><a href="#!">고객지원</a></li>
+                    </ul>
+                </nav>
+                <div class="top_service">
+                    <ul class="project">
+                        <li><a href="#!">주요프로젝트</a></li>
+                        <li><a href="#!">IR</a></li>
+                    </ul>
+                    <div class="lang">
+                        <strong><i class="xi-globus"></i> KOR <i class="xi-angle-down arrow"></i></strong>
+                        <ul class="lang_box">
+                            <li><a href="#!">KOR</a></li>
+                            <li><a href="#!">ENG</a></li>
+                            <li><a href="#!">CHN</a></li>
+                        </ul>
+                    </div>
+                    <div class="top_search">
+                        <strong><i class="xi-search"></i></strong>
+                        <div class="search_box">
+
+                            <form action="#!">
+                                <input type="text" placeholder="검색어를 입력하세요" required>
+                                <button>
+                                    <i class="xi-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="family_link">
-              <select id="FL">
-                <option value="">현대 family link</option>
-                <option value="https://www.hdasan.com/main">현대 아산</option>
-                <option value="https://www.hyundaimovex.com/">
-                  현대 무백스
-                </option>
-              </select>
+
+        </header>
+        <section class="MainVisual">
+            <div class="main_slider swiper">
+                <div class="swiper-wrapper">
+                    <figure class="swiper-slide itm01">
+                        <div class="w1200">
+                            <h2>
+                                현대엘리베이트 스마트 테크놀로지 체험 <span>Green Technology</span>
+                            </h2>
+                            <p>
+                                현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.
+                            </p>
+                            <a href="">바로가기</a>
+                        </div>
+                    </figure>
+                    <figure class="swiper-slide itm02">
+                        <div class="w1200">
+                            <h2>
+                                현대엘리베이트 스마트 테크놀로지 체험 <span>Green Technology</span>
+                            </h2>
+                            <p>
+                                현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.
+                            </p>
+                            <a href="">바로가기</a>
+                        </div>
+                    </figure>
+                    <figure class="swiper-slide itm03">
+                        <div class="w1200">
+                            <h2>
+                                현대엘리베이트 스마트 테크놀로지 체험 <span>Green Technology</span>
+                            </h2>
+                            <p>
+                                현대엘리베이터가 만든 새로운 길을 따라 세상은 위로 넓어집니다.
+                            </p>
+                            <a href="">바로가기</a>
+                        </div>
+                    </figure>
+                </div>
             </div>
-            <ul class="right">
-              <li>
-                <a href="#!"><i class="xi-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#!"><i class="xi-youtube-play"></i></a>
-              </li>
-              <li>
-                <a href="#!"><i class="xi-facebook"></i></a>
-              </li>
+            <ul class="slide_dots">
+                <li class="on"><span>slide01</span></li>
+                <li><span>slide02xxx</span></li>
+                <li><span>slide03</span></li>
             </ul>
-          </div>
-        </div>
-      </footer> -->
+            <div class="slide_handler">
+                <button class="prev">prev</button>
+                <button class="next">next</button>
+            </div>
+            <div class="main_slider_num"></div>
+        </section>
+        <section class="MainContent sc">
+            <h2>사람과 사람을 연결하는 종합 승강기 기업</h2>
+            <p class="tit">최고의 기술과 서비스로 편리하고 풍요로운 세상을 만들어갑니다.</p>
+            <div class="inner">
+                <figure>
+                    <div class="thumb">
+                        <img src="./assets/section1_1.jpg" alt="">
+                    </div>
+                    <div class="des">
+                        엘리베이터
+                    </div>
+                    <p>
+                        단순한 수직운송수단을 넘어 빌딩의 가치를<br />
+                        높여 드립니다.
+                    </p>
+                    <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                </figure>
+                <figure>
+                    <div class="thumb">
+                        <img src="./assets/section1_2.jpg" alt="">
+                    </div>
+                    <div class="des">
+                        엘리베이터
+                    </div>
+                    <p>
+                        단순한 수직운송수단을 넘어 빌딩의 가치를<br />
+                        높여 드립니다.
+                    </p>
+                    <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                </figure>
+                <figure>
+                    <div class="thumb">
+                        <img src="./assets/section1_3.jpg" alt="">
+                    </div>
+                    <div class="des">
+                        엘리베이터
+                    </div>
+                    <p>
+                        단순한 수직운송수단을 넘어 빌딩의 가치를<br />
+                        높여 드립니다.
+                    </p>
+                    <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                </figure>
+            </div>
+        </section>
+        <section class="Portfolio sc">
+            <div class="wrap_port">
+                <div class="left">
+                    <div class="portfolio_left_slide swiper">
+                        <div class="swiper-wrapper">
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m01.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m02.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m03.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m04.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m05.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m06.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m07.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m08.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m09.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right">
+                    <div class="title">
+                        <h2>건물의 가치를 높이는 현대엘리베이터 </h2>
+                        <p class="tit">특별한 기술을 실현할수록 여러분의 삶의 무대도 특별해 집니다.</p>
+                        <div class="slide_handler">
+                            <i class="xi-angle-left prev"></i>
+                            <i class="xi-angle-right next"></i>
+                        </div>
+                    </div>
+
+                    <div class="portfolio_right_slide swiper">
+                        <div class="swiper-wrapper">
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m01.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m02.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m03.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m04.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m05.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m06.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m07.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m08.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img src="./assets/main_m09.jpg" alt="">
+                                <strong>서울드래곤시티</strong>
+                            </figure>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <section class="Solution sc">
+            <h2>클린 무빙 솔루션</h2>
+            <p class="tit">접촉 없이 편하게 이동합니다.</p>
+            <div class="container">
+                <div class="center_slider swiper">
+                    <div class="swiper-wrapper">
+                        <figure class="swiper-slide">
+                            <img src="./assets/main_s01.jpg" alt="">
+                        </figure>
+                        <figure class="swiper-slide">
+                            <img src="./assets/main_s02.jpg" alt="">
+                        </figure>
+                        <figure class="swiper-slide">
+                            <img src="./assets/main_s03.jpg" alt="">
+                        </figure>
+                        <figure class="swiper-slide">
+                            <img src="./assets/main_s04.jpg" alt="">
+                        </figure>
+                        <figure class="swiper-slide">
+                            <img src="./assets/main_s05.jpg" alt="">
+                        </figure>
+                        <figure class="swiper-slide">
+                            <img src="./assets/main_s06.jpg" alt="">
+                        </figure>
+                        <figure class="swiper-slide">
+                            <img src="./assets/main_s07.jpg" alt="">
+                        </figure>
+                        <figure class="swiper-slide">
+                            <img src="./assets/main_s08.jpg" alt="">
+                        </figure>
+                        <figure class="swiper-slide">
+                            <img src="./assets/main_s09.jpg" alt="">
+                        </figure>
+                    </div>
+
+                </div>
+                <div class="case">
+                    <div class="content_box">
+                        <div class="title on">
+                            <strong>01 헤파필터 음이온 공기청정기</strong>
+                            <p>
+                                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
+                            </p>
+                            <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                        </div>
+                        <div class="title">
+                            <strong>02 헤파필터 음이온 공기청정기</strong>
+                            <p>
+                                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
+                            </p>
+                            <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                        </div>
+                        <div class="title">
+                            <strong>03 헤파필터 음이온 공기청정기</strong>
+                            <p>
+                                항상 쾌적한 실내공간을 유지해 줍니다.
+                            </p>
+                            <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                        </div>
+                        <div class="title">
+                            <strong>04 헤파필터 음이온 공기청정기</strong>
+                            <p>
+                                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
+                            </p>
+                            <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                        </div>
+                        <div class="title">
+                            <strong>05 헤파필터 음이온 공기청정기</strong>
+                            <p>
+                                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
+                            </p>
+                            <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                        </div>
+                        <div class="title">
+                            <strong>06 헤파필터 음이온 공기청정기</strong>
+                            <p>
+                                헤파필터 적용 음이온, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
+                            </p>
+                            <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                        </div>
+                        <div class="title">
+                            <strong>07 헤파필터 음이온 공기청정기</strong>
+                            <p>
+                                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
+                            </p>
+                            <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                        </div>
+                        <div class="title">
+                            <strong>08 헤파필터 음이온 공기청정기</strong>
+                            <p>
+                                헤파필터 적용 음이온 기능으로, 항상 쾌적한 실내공간을 유지해 줍니다.
+                            </p>
+                            <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                        </div>
+                        <div class="title">
+                            <strong>09 헤파필터 음이온 공기청정기</strong>
+                            <p>
+                                헤파필터 적용 음이온 기능으로, 세균 및 미세먼지를 해결하고 항상 쾌적한 실내공간을 유지해 줍니다.
+                            </p>
+                            <a href="#!" class="btn_s01">자세히보기 <i class="xi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="solution_slider_num">
+                    </div>
+                </div>
+                <div class="slide_handler">
+                    <i class="xi-arrow-left prev"></i>
+                    <i class="xi-arrow-right next"></i>
+                </div>
+            </div>
+        </section>
+        <section class="Promotion sc">
+            <h2>홍보영상 </h2>
+            <p>건물 특성에 맞는 다양한 제품으로 고객의 요구를 충족시켜드립니다.</p>
+            <div class="container">
+                <div class="movie_case">
+                    <div id="player"></div>
+                </div>
+                <div class="movie_handler">
+                    <button>동영상 제어</button>
+                </div>
+                <ul class="txt">
+                    <li>
+                        <strong>IT Technology</strong>
+                        <span>IT 기술이 창조하는 승강기 스마트 시스템</span>
+                    </li>
+                    <li>
+                        <strong>Green Technology</strong>
+                        <span>지구환경을 생각하는 녹색기술</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </div>
-    <!-- <div class="to_top">
-      <i class="xi-arrow-top"></i>
-    </div>
-    <div class="popup">
-      <div class="pop_case">
-        <div class="pop_con">
-          <img src="./assets/news02.jpg" alt="" />
-        </div>
-        <div class="pop_close after">
-          <input type="checkbox" />
-          <span>오늘 하루 열지 않기</span>
-          <button>CLOSE</button>
-        </div>
-      </div>
-    </div> -->
-  </body>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '100%',
+                width: '100%',
+                playerVars: {
+                    autoplay: 1,
+                    loop: 1,
+                    controls: 0,
+                    showinfo: 0,
+                    // autohide: 1,
+                    // playsinline: 1,
+                    mute: 1,
+                },
+                videoId: 'raw3Nu0_mBQ',
+                events: {
+                    // 'onReady': onPlayerReady,
+                    onStateChange:
+                        function (e) {
+                            if (e.data === YT.PlayerState.ENDED) {
+                                player.playVideo();
+                            }
+                        }
+                }
+            });
+        }
+
+        let SWC = true;
+        document.querySelector('.movie_handler button').addEventListener('click', function () {
+            SWC
+                ? player.pauseVideo()
+                : player.playVideo();
+
+            SWC = !SWC;
+            this.classList.toggle('on')
+        })
+
+
+
+
+    </script>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+
+
 </html>
