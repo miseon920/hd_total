@@ -45,8 +45,9 @@ const Promotion = () => {
       <div className="container">
         <div className="movie" ref={MOVIE} id="player">
           <YouTube videoId={url} opts={opts} className="u" />
+          <div className="movie_title">{UURL[tit].title}</div>
         </div>
-        <div className="movie_title">{UURL[tit].title}</div>
+
         <ul className="des">
           {UURL.map((you, idx) => (
             <li

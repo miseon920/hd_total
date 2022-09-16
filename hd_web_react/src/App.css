@@ -575,7 +575,6 @@
 .Solution .solution_slide figure img {
   margin: 0 auto;
 }
-
 .Promotion {
   background: url(../public/assets/img/section4_bg.jpg) no-repeat left bottom;
 }
@@ -584,7 +583,10 @@
   position: relative;
   width: 800px;
   height: 450px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
+}
+.Promotion .container {
+  color: var(--wc);
 }
 
 .Promotion .movie .u {
@@ -596,11 +598,71 @@
 }
 
 .Promotion .des {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 40px;
   text-align: center;
-  gap: 50px;
+}
+
+.Promotion .des li {
+  cursor: pointer;
+  width: 300px;
+}
+
+.Promotion .des li:first-child::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: calc(50% - 5px);
+  width: 4px;
+  height: 15px;
+  background: var(--lc);
+  transition: 0.3s;
+}
+
+.Promotion .des li:first-child.on::after {
+  height: 30px;
+  background: var(--sc);
+}
+
+.Promotion .des li:last-child::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: calc(50% + 5px);
+  width: 4px;
+  height: 15px;
+  background: var(--lc);
+  transition: 0.3s;
+}
+
+.Promotion .des li:last-child.on::after {
+  height: 30px;
+  background: var(--sc);
+}
+
+.Promotion .des .tit {
+  color: var(--sc);
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+
+.Promotion .des p {
+  color: var(--lc);
+  font-size: 15px;
+}
+
+.Promotion .movie_title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 0 15px;
+  min-width: 300px;
+  color: var(--lc);
+  background: var(--mc);
+  line-height: 35px;
 }
 
 .News .inner {

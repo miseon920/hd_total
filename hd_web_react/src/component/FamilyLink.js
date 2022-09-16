@@ -15,7 +15,11 @@ const FamilyLink = () => {
   return (
     <select onChange={(e) => setflnk(e.target.value)}>
       {FLINK.map((link) => {
-        return <option value={link.link}>{link.name}</option>;
+        return (
+          <option key={link.id} value={link.link}>
+            {link.name}
+          </option>
+        );
       })}
     </select>
   );
