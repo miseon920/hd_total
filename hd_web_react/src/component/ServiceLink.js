@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const SERVICE = [
   {
@@ -37,6 +37,12 @@ const SERVICE = [
 const ServiceLink = () => {
   const [slink, setSlink] = useState();
   const [swc, setSwc] = useState(false);
+
+  useEffect(() => {
+    //닫히는것을 위해서 링크가 될때마다 true로 바꿔준것
+    setSwc(true);
+  }, [slink]);
+
   return (
     <ul className="ServiceLink">
       {SERVICE.map((link, idx) => {

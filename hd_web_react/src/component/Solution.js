@@ -90,7 +90,7 @@ const Solution = () => {
                 <img
                   src={
                     process.env.PUBLIC_URL +
-                    "/assets/img/main_s0" +
+                    "/assets/images/main_s0" +
                     img.id +
                     ".jpg"
                   }

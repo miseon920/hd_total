@@ -1,35 +1,58 @@
-import { useEffect, useState } from "react";
-import { BsArrowUpShort } from "react-icons/bs";
-import styles from "./Totop.module.css";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { gsap } from "gsap";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
+//gsap... javascript animation, styled-component...
+
+const Btn = styled.div`
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  color: #fff;
+  background: #008850;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    color: #ff0;
+  }
+
+  &.on {
+    visibility: visible;
+    opacity: 1;
+  }
+`;
 
 const Totop = () => {
-  const [scrY, setScrY] = useState(0);
-  const [totopBtn, setTotoBtn] = useState(false);
-
-  const scrTotop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  const [scrollY, setScrollY] = useState(0);
+  const totopHandler = () => {
+    gsap.to(window, { duration: 0.5, scrollTo: 0 });
   };
 
-  const btnFade = () => {
-    setScrY(window.scrollY);
-    scrY > 100 ? setTotoBtn(true) : setTotoBtn(false);
+  const scrllEvent = () => {
+    let scy = window.scrollY;
+    setScrollY(scy);
   };
+
   useEffect(() => {
-    window.addEventListener("scroll", btnFade);
+    gsap.registerPlugin(ScrollToPlugin);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrllEvent);
     return () => {
-      window.removeEventListener("scroll", btnFade);
+      window.removeEventListener("scroll", scrllEvent);
     };
-  }, [scrY]);
+  }, []);
+
   return (
-    <div
-      onClick={scrTotop}
-      className={`icon ${styles.icon} ${totopBtn ? "on" : ""}`}
-    >
-      <BsArrowUpShort />
-    </div>
+    <Btn onClick={totopHandler} className={scrollY > 400 && "on"}>
+      <i className="xi-arrow-top"></i>
+    </Btn>
   );
 };
 
